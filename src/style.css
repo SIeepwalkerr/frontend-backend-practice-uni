@@ -1,3 +1,153 @@
+
+:root {
+  /* Существующие токены... */
+  color-scheme: light;
+}
+
+body.theme-dark {
+  color-scheme: dark;
+}
+
+/* Дополняем reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Добавляем недостающие стили */
+.main {
+  min-height: 80vh;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.team-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+}
+
+.values-list__item {
+  padding: var(--space-2) 0;
+  font-size: 1.1rem;
+}
+
+.contacts-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+@media (max-width: 768px) {
+  .contacts-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-item {
+  margin-bottom: var(--space-4);
+}
+
+.map-placeholder {
+  background: var(--color-border);
+  padding: var(--space-5);
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.card__img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: var(--color-border);
+  border-radius: var(--radius);
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Исправляем модальное окно для <dialog> */
+dialog.modal {
+  border: none;
+  border-radius: var(--radius);
+  padding: 0;
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+dialog.modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  padding: var(--space-5);
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-muted);
+}
+
+/* Состояния для якоря */
+:target {
+  scroll-margin-top: 2rem;
+}
+
 .modal[hidden]{display:none;}
 .modal{position:fixed; inset:0; display:grid; place-items:center; z-index:1000;}
 .modal__backdrop{position:absolute; inset:0; background:rgba(0,0,0,.5);}
