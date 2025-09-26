@@ -1,12 +1,27 @@
+
+## 3. `sitemap.xml`
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
- <url>
- <loc>https://ваш-логин.github.io/имя-репозитория/</loc>
- </url>
- <url>
- <loc>https://ваш-логин.github.io/имя-репозитория/about.html</loc>
- </url>
- <url>
- <loc>https://ваш-логин.github.io/имя-репозитория/contacts.html</loc>
- </url>
+    <url>
+        <loc>https://SIeepwalkerr.github.io/my-awesome-project/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://SIeepwalkerr.github.io/my-awesome-project/about.html</loc>
+        <lastmod>2025-01-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://SIeepwalkerr.github.io/my-awesome-project/contacts.html</loc>
+        <lastmod>2025-01-15</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://SIeepwalkerr.github.io/my-awesome-project/forms/form-page.html</loc>
+        <lastmod>2025-01-15</lastmod>
+        <priority>0.6</priority>
+    </url>
 </urlset>

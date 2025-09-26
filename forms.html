@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи - ТехноСтарт</title>
+    <meta name="description" content="Форма для связи с компанией ТехноСтарт. Отправьте ваш вопрос или заявку на разработку">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-header__brand" href="../index.html">ТехноСтарт</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="../about.html">О нас</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="../contacts.html">Контакты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" href="forms.html">Форма</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <button class="site-nav__link theme-toggle" type="button" aria-pressed="false">
+                            Смена темы
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a class="breadcrumbs__link" href="../index.html">Главная</a>
+                <span class="breadcrumbs__current">Форма обратной связи</span>
+            </nav>
+
+            <h1 class="page-title">Форма обратной связи</h1>
+
+            <div class="form-page">
+                <section class="form-intro">
+                    <h2 class="form-intro__title">Свяжитесь с нами</h2>
+                    <p class="form-intro__text">Заполните форму ниже, и наш специалист свяжется с вами в течение рабочего дня для обсуждения вашего проекта</p>
+                </section>
+
+                <form class="form form--page" id="contactFormPage" novalidate>
+                    <div class="form__group">
+                        <label class="form__label" for="formName">Имя *</label>
+                        <input class="form__input" id="formName" name="name" type="text" required minlength="2" autocomplete="given-name">
+                        <span class="form__error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="formEmail">E-mail *</label>
+                        <input class="form__input" id="formEmail" name="email" type="email" required autocomplete="email">
+                        <span class="form__error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="formPhone">Телефон</label>
+                        <input class="form__input" id="formPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                               placeholder="+7 (900) 000-00-00">
+                        <span class="form__error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="formTopic">Тема обращения *</label>
+                        <select class="form__select" id="formTopic" name="topic" required>
+                            <option value="">Выберите тему</option>
+                            <option value="consultation">Консультация</option>
+                            <option value="web-development">Веб-разработка</option>
+                            <option value="mobile-app">Мобильное приложение</option>
+                            <option value="support">Техническая поддержка</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="formBudget">Бюджет проекта</label>
+                        <select class="form__select" id="formBudget" name="budget">
+                            <option value="">Не указан</option>
+                            <option value="50-100">50 000 - 100 000 руб.</option>
+                            <option value="100-300">100 000 - 300 000 руб.</option>
+                            <option value="300-500">300 000 - 500 000 руб.</option>
+                            <option value="500+">500 000+ руб.</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="formMessage">Сообщение *</label>
+                        <textarea class="form__textarea" id="formMessage" name="message" rows="5" required 
+                                  placeholder="Опишите ваш проект или задайте вопрос..."></textarea>
+                        <span class="form__error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__checkbox">
+                            <input type="checkbox" name="agreement" required>
+                            <span class="form__checkbox-text">Я согласен на обработку персональных данных *</span>
+                        </label>
+                        <span class="form__error" aria-live="polite"></span>
+                    </div>
+
+                    <button class="button button--primary button--full" type="submit">
+                        Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ТехноСтарт. Все права защищены.</p>
+            <p>Разработано с ❤️ для учебного проекта</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

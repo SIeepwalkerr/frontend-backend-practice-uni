@@ -1,43 +1,124 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Контакты</title>
- <meta name="description" content="Описание страницы контактов для сайта">
- <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - ТехноСтарт | Свяжитесь с нами</title>
+    <meta name="description" content="Контактная информация компании ТехноСтарт. Телефон, email, адрес офиса и форма обратной связи">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Контакты - ТехноСтарт">
+    <meta property="og:description" content="Свяжитесь с нами для обсуждения вашего проекта">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
- <header>
- <a href="/">Логотип или название сайта</a>
- <!-- Главное меню навигации -->
- <nav>
- <ul>
- <li><a href="index.html">Главная</a></li>
- <li><a href="about.html">О нас</a></li>
- <li><a href="contacts.html">Контакты</a></li>
- </ul>
- </nav>
- </header>
- <main>
- <!-- Простые "хлебные крошки" -->
- <nav aria-label="Хлебные крошки">
- <a href="index.html">Главная</a> →
- <span>О нас</span>
- </nav>
- <h1>О нашей компании</h1>
- <section>
- <h2>Наша история</h2>
- <p>Текст о том, как все начиналось...</p>
- </section>
- <section>
- <h2>Наша команда</h2>
- <p>Текст о команде...</p>
- </section>
- </main>
- <footer>
- <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
- <p>Телефон: +7 (123) 456-78-90</p>
- </footer>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-header__brand" href="index.html">ТехноСтарт</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="about.html">О нас</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <button class="site-nav__link theme-toggle" type="button" aria-pressed="false">
+                            Смена темы
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
+                <span class="breadcrumbs__current">Контакты</span>
+            </nav>
+
+            <h1 class="page-title">Контакты</h1>
+
+            <div class="contacts-layout">
+                <section class="contact-info">
+                    <h2 class="contact-info__title">Наши контакты</h2>
+                    
+                    <div class="contact-item">
+                        <h3 class="contact-item__title">📞 Телефон</h3>
+                        <p class="contact-item__value">+7 (495) 123-45-67</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3 class="contact-item__title">✉️ Email</h3>
+                        <p class="contact-item__value">info@technostart.ru</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3 class="contact-item__title">📍 Адрес</h3>
+                        <p class="contact-item__value">Москва, ул. Технологическая, 15</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3 class="contact-item__title">🕒 Режим работы</h3>
+                        <p class="contact-item__value">Пн-Пт: 9:00-18:00</p>
+                    </div>
+                </section>
+
+                <section class="contact-form-section">
+                    <h2 class="contact-form-section__title">Форма обратной связи</h2>
+                    <p class="contact-form-section__text">Заполните форму ниже, и мы свяжемся с вами в ближайшее время</p>
+                    
+                    <form class="form form--page" id="contactPageForm" novalidate>
+                        <div class="form__group">
+                            <label class="form__label" for="pageName">Имя *</label>
+                            <input class="form__input" id="pageName" name="name" type="text" required minlength="2">
+                            <span class="form__error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="pageEmail">E-mail *</label>
+                            <input class="form__input" id="pageEmail" name="email" type="email" required>
+                            <span class="form__error" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="pageMessage">Сообщение *</label>
+                            <textarea class="form__textarea" id="pageMessage" name="message" rows="5" required></textarea>
+                            <span class="form__error" aria-live="polite"></span>
+                        </div>
+
+                        <button class="button button--primary button--full" type="submit">
+                            Отправить сообщение
+                        </button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Карта (заглушка) -->
+            <section class="map-section">
+                <h2 class="map-section__title">Мы на карте</h2>
+                <div class="map-placeholder">
+                    <p>Здесь будет интерактивная карта</p>
+                    <p>📍 Москва, ул. Технологическая, 15</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ТехноСтарт. Все права защищены.</p>
+            <p>Разработано с ❤️ для учебного проекта</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -2,62 +2,177 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- Важная мета-информация для корректного отображения на мобильных устройствах -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="style.css/">
-=======
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Главная - Название вашего сайта</title>
- <meta name="description" content="Краткое описание главной страницы вашего сайта">
- <meta property="og:type" content="website">
- <meta property="og:title" content="Заголовок страницы">
- <meta property="og:description" content="Описание страницы">
- <meta property="og:image" content="https://.../link-to-image.jpg">
- <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
- <link rel="stylesheet" href="styles.css">
+    <title>Главная - ТехноСтарт | Разработка IT-решений</title>
+    <meta name="description" content="ТехноСтарт - ведущая компания по разработке современных веб-решений и мобильных приложений. Инновационные подходы, качественный код.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ТехноСтарт - Разработка IT-решений">
+    <meta property="og:description" content="Создаем современные веб-приложения и мобильные решения">
+    <meta property="og:image" content="assets/img/hero-1920.jpg">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
- <!-- Шапка сайта -->
-  <script src="script.js"></script>
- <header>
- <a href="/">Логотип или название сайта</a>
- <!-- Главное меню навигации -->
- <nav>
- <ul>
- <li><a href="index.html">Главная</a></li>
- <li><a href="about.html">О нас</a></li>
- <li><a href="contacts.html">Контакты</a></li>
- </ul>
- </nav>
- </header>
- <!-- Уникальное основное содержимое страницы -->
- <main>
- <h1>Добро пожаловать на наш сайт!</h1>
- <!-- Секция 1 с якорем -->
- <section id="services">
- <h2>Наши услуги</h2>
- <p>Описание предоставляемых услуг...</p>
- <a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы -->
- </section>
- <!-- Секция 2 с якорем -->
- <section id="portfolio">
- <h2>Портфолио</h2>
- <p>Примеры наших работ...</p>
- </section>
- <!-- Секция 3 с якорем -->
- <section id="contacts">
- <h2>Контактная информация</h2>
- <p>Наши контакты...</p
-<a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
- </section>
- </main>
- <!-- Подвал сайта -->
- <footer>
- <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
- <p>Телефон: +7 (123) 456-78-90</p>
- </footer>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-header__brand" href="index.html">ТехноСтарт</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="about.html">О нас</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <button class="site-nav__link site-nav__link--cta theme-toggle" type="button" aria-pressed="false">
+                            Смена темы
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Герой-секция с фоновым изображением -->
+            <section class="hero">
+                <h1 class="hero__title">Инновационные IT-решения для вашего бизнеса</h1>
+                <p class="hero__text">Создаем современные веб-приложения, мобильные решения и комплексные системы автоматизации</p>
+                <a class="hero__button" href="#contacts">Начать сотрудничество</a>
+            </section>
+
+            <!-- Секция услуг -->
+            <section class="section" id="services">
+                <h2 class="section__title">Наши услуги</h2>
+                <div class="services-grid">
+                    <article class="card">
+                        <img class="card__img" 
+                             src="assets/img/card-640.jpg" 
+                             srcset="assets/img/card-640.jpg 640w, assets/img/card-960.jpg 960w, assets/img/card-1280.jpg 1280w"
+                             sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
+                             alt="Веб-разработка" 
+                             width="640" 
+                             height="360"
+                             loading="lazy">
+                        <div class="card__content">
+                            <h3 class="card__title">Веб-разработка</h3>
+                            <p class="card__text">Создаем современные и отзывчивые веб-приложения на современных технологиях</p>
+                            <a class="card__link" href="#contacts">Заказать</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__img-placeholder"></div>
+                        <div class="card__content">
+                            <h3 class="card__title">Мобильные приложения</h3>
+                            <p class="card__text">Разработка кроссплатформенных мобильных приложений для iOS и Android</p>
+                            <a class="card__link" href="#contacts">Заказать</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Секция портфолио -->
+            <section class="section" id="portfolio">
+                <h2 class="section__title">Наше портфолио</h2>
+                <p class="section__text">Реализовали более 50 успешных проектов для компаний различных отраслей</p>
+                
+                <!-- Видео-блок -->
+                <div class="media">
+                    <video class="media__video" controls preload="metadata" playsinline
+                           width="960" height="540" poster="assets/video/poster.jpg">
+                        <source src="assets/video/teaser-1080.mp4" type="video/mp4">
+                        <source src="assets/video/teaser-720.webm" type="video/webm">
+                        <track kind="captions" srclang="ru" src="assets/video/captions-ru.vtt" label="Русские субтитры" default>
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+            </section>
+
+            <!-- Секция контактов -->
+            <section class="section" id="contacts">
+                <h2 class="section__title">Контактная информация</h2>
+                <div class="contacts-grid">
+                    <div class="contacts-info">
+                        <h3>Наши контакты</h3>
+                        <p>📞 +7 (495) 123-45-67</p>
+                        <p>✉️ info@technostart.ru</p>
+                        <p>📍 Москва, ул. Технологическая, 15</p>
+                    </div>
+                    <div class="contacts-action">
+                        <p>Готовы обсудить ваш проект?</p>
+                        <button class="button button--primary" id="openDialog" type="button">
+                            Связаться с нами
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Модальное окно -->
+    <dialog class="modal" id="contactDialog" aria-labelledby="dialogTitle">
+        <div class="modal__content">
+            <h2 class="modal__title" id="dialogTitle">Обратная связь</h2>
+            
+            <form class="form" id="contactForm" method="dialog" novalidate>
+                <div class="form__group">
+                    <label class="form__label" for="name">Имя *</label>
+                    <input class="form__input" id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
+                    <span class="form__error" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="email">E-mail *</label>
+                    <input class="form__input" id="email" name="email" type="email" required autocomplete="email">
+                    <span class="form__error" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="phone">Телефон *</label>
+                    <input class="form__input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                           aria-describedby="phoneHelp" placeholder="+7 (900) 000-00-00"
+                           required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+                    <small class="form__help" id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+                    <span class="form__error" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="topic">Тема</label>
+                    <select class="form__select" id="topic" name="topic" required>
+                        <option value="">Выберите тему</option>
+                        <option value="consultation">Консультация</option>
+                        <option value="project">Заказ проекта</option>
+                        <option value="support">Техническая поддержка</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="message">Сообщение *</label>
+                    <textarea class="form__textarea" id="message" name="message" rows="4" required></textarea>
+                    <span class="form__error" aria-live="polite"></span>
+                </div>
+
+                <div class="form__actions">
+                    <button class="button button--secondary" type="button" id="closeDialog">Закрыть</button>
+                    <button class="button button--primary" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ТехноСтарт. Все права защищены.</p>
+            <p>Разработано с ❤️ для учебного проекта</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

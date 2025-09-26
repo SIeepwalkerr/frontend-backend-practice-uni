@@ -1,58 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>О нас - Название вашего сайта</title>
- <meta name="description" content="Узнайте больше о нашей компании и истории">
- <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - ТехноСтарт | Наша команда и история</title>
+    <meta name="description" content="Узнайте больше о компании ТехноСтарт: наша история, команда профессионалов и подход к работе">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="О нас - ТехноСтарт">
+    <meta property="og:description" content="Команда профессионалов с многолетним опытом в IT-разработке">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
- <header>
- <a href="/">Логотип или название сайта</a>
- <!-- Главное меню навигации -->
- <nav>
- <ul>
- <li><a href="index.html">Главная</a></li>
- <li><a href="about.html">О нас</a></li>
- <li><a href="contacts.html">Контакты</a></li>
- </ul>
- </nav>
- </header>
- <main>
- <!-- Простые "хлебные крошки" -->
- <nav aria-label="Хлебные крошки">
- <a href="index.html">Главная</a> →
- <span>О нас</span>
- </nav>
- <h1>О нашей компании</h1>
- <section>
- <h2>Наша история</h2>
- <p>Текст о том, как все начиналось...</p>
- </section>
- <section>
- <h2>Наша команда</h2>
- <p>Текст о команде...</p>
- <button id="openModal" type="button">Написать нам</button>
-<div class="modal" id="modal" hidden aria-modal="true" role="dialog" arialabelledby="mTitle">
- <div class="modal__backdrop" data-close></div>
- <div class="modal__window" role="document">
- <h2 id="mTitle">Обратная связь</h2>
- <form id="contactForm" novalidate>
- <!-- поля формы (как выше) -->
- <div class="form-actions">
- <button type="button" id="closeModal">Закрыть</button>
- <button type="submit">Отправить</button>
- </div>
- </form>
- </div>
-</div>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-header__brand" href="index.html">ТехноСтарт</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" href="about.html">О нас</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <button class="site-nav__link theme-toggle" type="button" aria-pressed="false">
+                            Смена темы
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
- </section>
- </main>
- <footer>
- <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
- <p>Телефон: +7 (123) 456-78-90</p>
- </footer>
+    <main class="main">
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
+                <span class="breadcrumbs__current">О нас</span>
+            </nav>
+
+            <h1 class="page-title">О нашей компании</h1>
+
+            <section class="section">
+                <h2 class="section__title">Наша история</h2>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p>Компания ТехноСтарт была основана в 2020 году с целью создания качественных IT-решений для бизнеса. За 5 лет работы мы реализовали более 100 успешных проектов.</p>
+                        <p>Наша команда состоит из опытных разработчиков, дизайнеров и менеджеров проектов, которые увлечены своим делом.</p>
+                    </div>
+                    <div class="content-media">
+                        <img src="assets/img/card-640.jpg" 
+                             alt="Наш офис" 
+                             width="640" 
+                             height="360"
+                             loading="lazy"
+                             class="content-image">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Наша команда</h2>
+                <div class="team-grid">
+                    <article class="team-card">
+                        <h3 class="team-card__title">Анна Иванова</h3>
+                        <p class="team-card__role">Frontend-разработчик</p>
+                        <p class="team-card__bio">Специализируется на создании пользовательских интерфейсов с использованием современных фреймворков.</p>
+                    </article>
+
+                    <article class="team-card">
+                        <h3 class="team-card__title">Петр Сидоров</h3>
+                        <p class="team-card__role">Backend-разработчик</p>
+                        <p class="team-card__bio">Разрабатывает серверную логику и API для высоконагруженных систем.</p>
+                    </article>
+
+                    <article class="team-card">
+                        <h3 class="team-card__title">Мария Петрова</h3>
+                        <p class="team-card__role">UI/UX дизайнер</p>
+                        <p class="team-card__bio">Создает интуитивно понятные и эстетичные интерфейсы для веб и мобильных приложений.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Наши ценности</h2>
+                <ul class="values-list">
+                    <li class="values-list__item">✅ Качество кода и тестирование</li>
+                    <li class="values-list__item">🚀 Инновационные технологии</li>
+                    <li class="values-list__item">🤝 Прозрачность и коммуникация</li>
+                    <li class="values-list__item">⏱️ Соблюдение сроков</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ТехноСтарт. Все права защищены.</p>
+            <p>Разработано с ❤️ для учебного проекта</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
